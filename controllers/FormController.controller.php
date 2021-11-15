@@ -19,13 +19,13 @@ class FormController
 
     public function formCheck()
     {
-        require 'views/contact.view.php';
         
-        if (!empty($_POST['envoyer'])) {
+        if (isset($_POST['envoyer'])) {
             try {
+                $error="";
                 //on vérifie que le champ mail est correctement rempli
                 if (empty($_POST['email'])) {
-                    $error = "Le champ email et vide";
+                    $error .= "Le champ email et vide";
                 }
                 //on vérifie que l'adresse est correcte
                 if (!preg_match("#^[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?@[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?\.[a-z]{2,}$#i", $_POST['email'])) {
@@ -81,5 +81,6 @@ class FormController
                 GlobalController::alert("danger", $e->getMessage());
             }
         }
+        require 'views/contact.view.php';
     }
 }
