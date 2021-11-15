@@ -1,0 +1,98 @@
+/* INITIALISATION DES BALISE */
+
+p{
+    margin: unset;
+    padding: unset;
+}
+div{
+    margin: unset;
+}
+
+
+/* GESTION DU BODY */
+
+.container{
+    width: 100vw;
+    margin: auto;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden; 
+}
+
+/* GESTION DU NAVBAR */
+
+nav{
+    width: 100%;
+}
+.nav-link{
+    text-align: center;
+    margin-left: 4% !important;
+    border-radius: 30px ;
+    color: white !important;
+    
+}
+.navbar-toggler{
+    border-color: rgb(171, 0, 21) !important;
+    
+    margin-left: 2vw !important;
+}
+
+.nav-link:hover{
+    transform: scale(1.2);
+    color: white !important;
+    border-radius: 30px;
+    background-color: rgb(171, 0, 21);
+    
+}
+
+/* GESTION DE LA PAGE D ACCUEIL */
+
+.article-accueil{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.image-accueil{
+    width: 100%;
+}
+
+/* Gestion de la page de contact */
+
+
+.h2-contact-un{
+    text-align: center;
+}
+
+.section-contact-un{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;  
+}
+
+.label-form{
+    width: 100%;
+    text-align: center !important;
+}
+
+.badge{
+    color: black;
+}
+
+
+/* Lorsque la nav passe en menu burger */
+
+@media screen and (max-width: 991px) {
+
+.nav-link{
+    margin:unset !important;
+   
+}
+}   
