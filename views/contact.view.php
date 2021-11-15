@@ -1,4 +1,5 @@
 <?php
+
 ob_start();
 if (!empty($_SESSION['alert'])) :
 ?>
@@ -6,8 +7,8 @@ if (!empty($_SESSION['alert'])) :
         <?= $_SESSION['alert']['msg'] ?>
     </div>
 <?php
-endif
-
+endif;
+unset($_SESSION['alert']);
 ?>
 
 <div class="div-contact-1">
