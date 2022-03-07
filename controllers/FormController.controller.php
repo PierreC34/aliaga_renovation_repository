@@ -10,13 +10,6 @@ $formController = new FormController;
 
 class FormController
 {
-
-    // public function form()
-    // {
-    //     require 'views/contact.view.php';
-
-    // }
-
     public function formCheck()
     {
         require 'views/contact.view.php';
@@ -55,14 +48,14 @@ class FormController
                     $mail->isSMTP();                                            //Send using SMTP
                     $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                    $mail->Username   = 'testprogrammationpc@gmail.com';        //SMTP username
-                    $mail->Password   = '3f4f60f63a1';                          //SMTP password
+                    $mail->Username   = '';                                     //SMTP username
+                    $mail->Password   = '';                                     //SMTP password
                     $mail->SMTPSecure = 'tls';                                  //Enable implicit TLS encryption
                     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                     //Recipients
-                    // $mail->addAddress('aliagarenovation@gmail.com');          // adresse a martin 
-                    $mail->addAddress('testprogrammationpc@gmail.com');
+                    // $mail->addAddress('');         
+                    $mail->addAddress('');
                     $mail->addReplyTo($addressEmail, '');
 
                     //Contenu
